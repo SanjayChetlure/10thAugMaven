@@ -16,7 +16,6 @@ import Module1_Login.SwagLabsHomePage;
 import Module1_Login.SwagLabsLoginPage;
 import Module1_Login.SwagLabsOpenMenuPage;
 
-
 public class SwagLabLoginTest extends BaseClass
 {
 	SwagLabsLoginPage login;

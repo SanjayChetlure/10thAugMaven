@@ -20,7 +20,7 @@ public class UtilityClass
 	//need to pass 2 parameter 1: rowIndex, 2: colIndex
 	public static String getTD(int rowIndex, int colIndex) throws EncryptedDocumentException, IOException 
 	{
-		FileInputStream file=new FileInputStream("D:\\10th Aug 2024\\Workspace\\10ThAugMaven2\\TestData\\10thAug24.xlsx");
+		FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\TestData\\10thAug24.xlsx");
 		Sheet sh = WorkbookFactory.create(file).getSheet("DDF");
 		
 		String value = sh.getRow(rowIndex).getCell(colIndex).getStringCellValue();
@@ -31,13 +31,13 @@ public class UtilityClass
 	public static void captureSS(WebDriver driver, int TCID) throws IOException 
 	{
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest=new File("D:\\10th Aug 2024\\Workspace\\10ThAugMaven2\\Screenshots\\TestCaseID"+TCID+".jpg");
+		File dest=new File(System.getProperty("user.dir")+"\\Screenshots\\TestCaseID"+TCID+".jpg");
 		FileHandler.copy(src, dest);
 	}
 	
 	public static String getPFData(String key) throws IOException 
 	{
-		FileInputStream file=new FileInputStream("D:\\10th Aug 2024\\Workspace\\10ThAugMaven2\\PropertyFile.properties");
+		FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\PropertyFile.properties");
 		
 		Properties p=new Properties();
 		p.load(file);

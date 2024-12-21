@@ -27,6 +27,15 @@ public class UtilityClass
 		return value;
 	}
 	
+	public static double getTDInDouble(int rowIndex, int colIndex) throws EncryptedDocumentException, IOException 
+	{
+		FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\TestData\\10thAug24.xlsx");
+		Sheet sh = WorkbookFactory.create(file).getSheet("DDF");
+		
+		double value = sh.getRow(rowIndex).getCell(colIndex).getNumericCellValue();
+		return value;
+	}
+	
 	
 	public static void captureSS(WebDriver driver, int TCID) throws IOException 
 	{

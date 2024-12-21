@@ -44,7 +44,7 @@
           <version>3.5.2</version>
           <configuration>
           	<suiteXmlFiles>
-          		<suiteXmlFile>SwagLabLoginSuite.xml</suiteXmlFile>
+          		<suiteXmlFile>SwagLabSuite.xml</suiteXmlFile>
           	</suiteXmlFiles>
           </configuration>
           

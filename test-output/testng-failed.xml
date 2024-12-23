@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Module4_Products_Test.SwagLabProductTest">
+      <class name="Module5_Order_Test.SwagLabOrderTest">
         <methods>
-          <include name="logoutFromApp"/>
-          <include name="loginToApp"/>
-          <include name="verifyProductTotalPrice"/>
           <include name="closeBrowser"/>
+          <include name="PurchaseAnyProduct"/>
+          <include name="loginToApp"/>
           <include name="openBrowser"/>
+          <include name="logoutFromApp"/>
         </methods>
-      </class> <!-- Module4_Products_Test.SwagLabProductTest -->
+      </class> <!-- Module5_Order_Test.SwagLabOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
